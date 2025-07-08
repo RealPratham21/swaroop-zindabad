@@ -420,6 +420,21 @@ export const EnhancedPromptConsultant: React.FC<EnhancedPromptConsultantProps> =
 
       {/* Enhanced Input */}
       <div className="p-6 border-t border-gray-200">
+        {/* Prototype Disclaimer */}
+        <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+          <div className="flex items-start gap-3">
+            <div className="p-2 bg-blue-100 rounded-lg">
+              <Brain className="w-5 h-5 text-blue-600" />
+            </div>
+            <div>
+              <h3 className="font-semibold text-blue-900 mb-2">AI Insights Module - Prototype</h3>
+              <p className="text-blue-800 text-sm">
+                This is a prototype of the AI Insight module. Additional features and enhancements will be introduced in future iterations.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           {selectedFunction && (
             <div className="flex items-center gap-2 p-3 bg-blue-50 rounded-lg">

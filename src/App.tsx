@@ -18,6 +18,9 @@ import { SystemMapping } from './components/SystemMapping';
 import { RealTimeInsightsDashboard } from './components/RealTimeInsightsDashboard';
 import { MarketIntelligenceEngine } from './components/MarketIntelligenceEngine';
 import { DataPipelineTab } from './components/DataPipelineTab';
+import { PredictiveAnalyticsDashboard } from './components/PredictiveAnalyticsDashboard';
+import { AdvancedVisualizationHub } from './components/AdvancedVisualizationHub';
+import { AIInsightsPrototype } from './components/AIInsightsPrototype';
 import { ConsultantResponse } from './types';
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
   const tabs = [
     { id: 'realtime', label: 'Live Intelligence', icon: Activity, gradient: 'from-green-500 to-emerald-500' },
     { id: 'strategy', label: 'Market Strategy', icon: Zap, gradient: 'from-purple-500 to-pink-500' },
+    { id: 'ai-insights-prototype', label: 'AI Insights', icon: Brain, gradient: 'from-indigo-500 to-purple-500' },
+    { id: 'predictive', label: 'Predictive Analytics', icon: TrendingUp, gradient: 'from-blue-500 to-cyan-500' },
+    { id: 'visualization', label: 'Advanced Viz', icon: Eye, gradient: 'from-pink-500 to-rose-500' },
     { id: 'data-pipeline-new', label: 'Data Pipeline', icon: Upload, gradient: 'from-blue-500 to-cyan-500' },
     { id: 'overview', label: 'Sales Overview', icon: BarChart3, gradient: 'from-blue-500 to-cyan-500' },
     { id: 'products', label: 'Product Analytics', icon: Package, gradient: 'from-purple-500 to-pink-500' },
@@ -137,6 +143,24 @@ function App() {
           {activeTab === 'strategy' && (
             <div className="space-y-8">
               <MarketIntelligenceEngine />
+            </div>
+          )}
+
+          {activeTab === 'ai-insights-prototype' && (
+            <div className="space-y-8">
+              <AIInsightsPrototype />
+            </div>
+          )}
+
+          {activeTab === 'predictive' && (
+            <div className="space-y-8">
+              <PredictiveAnalyticsDashboard />
+            </div>
+          )}
+
+          {activeTab === 'visualization' && (
+            <div className="space-y-8">
+              <AdvancedVisualizationHub />
             </div>
           )}
 
