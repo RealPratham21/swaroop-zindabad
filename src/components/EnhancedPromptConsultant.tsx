@@ -213,6 +213,21 @@ export const EnhancedPromptConsultant: React.FC<EnhancedPromptConsultantProps> =
 
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden h-fit max-h-[800px] flex flex-col">
+      {/* Prototype Disclaimer */}
+      <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+        <div className="flex items-start gap-3">
+          <div className="p-2 bg-blue-100 rounded-lg">
+            <Brain className="w-5 h-5 text-blue-600" />
+          </div>
+          <div>
+            <h3 className="font-semibold text-blue-900 mb-2">AI Insights Module - Prototype</h3>
+            <p className="text-blue-800 text-sm">
+              This is a prototype of the AI Insight module. Additional features and enhancements will be introduced in future iterations.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Enhanced Header */}
       <div className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 px-8 py-6">
         <div className="flex items-center gap-6">
@@ -226,8 +241,8 @@ export const EnhancedPromptConsultant: React.FC<EnhancedPromptConsultantProps> =
             <Bot className="w-8 h-8 text-white" />
           </motion.div>
           <div className="flex-1">
-            <h2 className="text-white font-bold text-2xl">Raymond AI Assistant</h2>
-            <p className="text-slate-300 text-lg">Advanced LLM with hyperlocal intelligence & market analysis</p>
+            <h2 className="text-white font-bold text-2xl">ForesightFlow AI Assistant</h2>
+            <p className="text-slate-300 text-lg">Advanced LLM with multi-brand intelligence & market analysis</p>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -295,8 +310,6 @@ export const EnhancedPromptConsultant: React.FC<EnhancedPromptConsultantProps> =
             </div>
 
             <div>
-              <h2 className="text-white font-bold text-xl">ForesightFlow AI Assistant</h2>
-              <p className="text-slate-300 text-lg">Advanced LLM with multi-brand intelligence & market analysis</p>
               <h3 className="text-lg font-semibold text-gray-700 mb-2">Smart Prompts:</h3>
               <div className="grid gap-4">
                 {smartPrompts.map((prompt, index) => {
